@@ -138,8 +138,8 @@ class TransformerBlock(nn.Module):
         self.ff = FeedForward(d_model)
 
         # Dropout
-        self.dropout_1 = nn.Dropout(dropout)
-        self.dropout_2 = nn.Dropout(dropout)
+        self.dropout_1 = nn.Dropout(0.3)
+        self.dropout_2 = nn.Dropout(0.1)
 
     def forward(self, x, mask):
         # 正規化とAttention
